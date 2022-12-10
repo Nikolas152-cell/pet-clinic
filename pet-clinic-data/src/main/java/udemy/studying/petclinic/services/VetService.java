@@ -1,6 +1,5 @@
 package udemy.studying.petclinic.services;
 
-import udemy.studying.petclinic.model.Owner;
 import udemy.studying.petclinic.model.Vet;
 
 import java.util.Set;
