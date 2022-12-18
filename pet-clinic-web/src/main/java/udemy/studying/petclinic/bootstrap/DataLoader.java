@@ -6,8 +6,6 @@ import udemy.studying.petclinic.model.Owner;
 import udemy.studying.petclinic.model.Vet;
 import udemy.studying.petclinic.services.OwnerService;
 import udemy.studying.petclinic.services.VetService;
-import udemy.studying.petclinic.services.map.OwnerServiceMap;
-import udemy.studying.petclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
