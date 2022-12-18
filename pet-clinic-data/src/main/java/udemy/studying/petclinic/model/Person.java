@@ -19,4 +19,8 @@ public class Person extends BaseEntity {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 }
