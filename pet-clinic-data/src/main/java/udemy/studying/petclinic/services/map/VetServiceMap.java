@@ -2,10 +2,11 @@ package udemy.studying.petclinic.services.map;
 
 import udemy.studying.petclinic.model.Vet;
 import udemy.studying.petclinic.services.CrudService;
+import udemy.studying.petclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
