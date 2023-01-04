@@ -1,8 +1,22 @@
-package udemy.studying.petclinic.model;
+package udemy.studying.petclinic.model.person;
+
+import udemy.studying.petclinic.model.BaseEntity;
 
 public class Person extends BaseEntity {
+
     private String firstName;
+
     private String lastName;
+
+    private ContactInfo contactInfo;
+
+    public ContactInfo getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(ContactInfo contactInfo) {
+        this.contactInfo = contactInfo;
+    }
 
     public String getFirstName() {
         return firstName;

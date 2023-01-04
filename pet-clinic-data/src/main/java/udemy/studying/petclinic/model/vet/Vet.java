@@ -1,6 +1,6 @@
 package udemy.studying.petclinic.model.vet;
 
-import udemy.studying.petclinic.model.Person;
+import udemy.studying.petclinic.model.person.Person;
 
 import java.util.Set;
 
