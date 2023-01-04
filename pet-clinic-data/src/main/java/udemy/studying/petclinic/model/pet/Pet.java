@@ -1,4 +1,7 @@
-package udemy.studying.petclinic.model;
+package udemy.studying.petclinic.model.pet;
+
+import udemy.studying.petclinic.model.BaseEntity;
+import udemy.studying.petclinic.model.Owner;
 
 import java.time.LocalDate;
 

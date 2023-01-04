@@ -1,8 +1,7 @@
 package udemy.studying.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
-import udemy.studying.petclinic.model.Vet;
-import udemy.studying.petclinic.services.CrudService;
+import udemy.studying.petclinic.model.vet.Vet;
 import udemy.studying.petclinic.services.VetService;
 
 import java.util.Set;

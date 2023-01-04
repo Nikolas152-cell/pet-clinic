@@ -1,4 +1,6 @@
-package udemy.studying.petclinic.model;
+package udemy.studying.petclinic.model.pet;
+
+import udemy.studying.petclinic.model.BaseEntity;
 
 public class PetType extends BaseEntity {
 

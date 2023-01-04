@@ -1,7 +1,7 @@
 package udemy.studying.petclinic.services.map;
 
 import org.springframework.stereotype.Service;
-import udemy.studying.petclinic.model.Pet;
+import udemy.studying.petclinic.model.pet.Pet;
 import udemy.studying.petclinic.services.PetService;
 
 import java.util.Set;

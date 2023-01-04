@@ -1,5 +1,7 @@
 package udemy.studying.petclinic.model;
 
+import udemy.studying.petclinic.model.pet.Pet;
+
 import java.time.LocalDate;
 
 public class Visit extends BaseEntity {

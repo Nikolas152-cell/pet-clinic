@@ -3,7 +3,7 @@ package udemy.studying.petclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import udemy.studying.petclinic.model.Owner;
-import udemy.studying.petclinic.model.Vet;
+import udemy.studying.petclinic.model.vet.Vet;
 import udemy.studying.petclinic.services.OwnerService;
 import udemy.studying.petclinic.services.VetService;
 
