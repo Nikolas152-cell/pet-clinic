@@ -3,6 +3,14 @@ package udemy.studying.petclinic.model.vet;
 import udemy.studying.petclinic.model.BaseEntity;
 
 public class Speciality extends BaseEntity {
+    public Speciality(String description) {
+        this.description = description;
+    }
+
+    public Speciality() {
+
+    }
+
     private String description;
 
     public String getDescription() {
