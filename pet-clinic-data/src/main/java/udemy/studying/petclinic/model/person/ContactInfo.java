@@ -1,11 +1,23 @@
 package udemy.studying.petclinic.model.person;
 
+import udemy.studying.petclinic.model.BaseEntity;
+
+import javax.persistence.*;
+
 /**
  * POJO for using in {@link Person} for extended Entities Vet, Owner and etc.
  */
-public class ContactInfo {
+@Entity
+@Table(name = "contact_info")
+public class ContactInfo extends BaseEntity {
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "city")
     private String city;
+
+    @Column(name = "telephone")
     private String telephone;
 
     public ContactInfo(String address, String city, String telephone) {
