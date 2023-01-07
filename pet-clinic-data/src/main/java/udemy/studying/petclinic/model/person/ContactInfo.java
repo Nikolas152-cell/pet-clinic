@@ -1,5 +1,7 @@
 package udemy.studying.petclinic.model.person;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import udemy.studying.petclinic.model.BaseEntity;
 
 import javax.persistence.*;
@@ -7,6 +9,8 @@ import javax.persistence.*;
 /**
  * POJO for using in {@link Person} for extended Entities Vet, Owner and etc.
  */
+@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "contact_info")
 public class ContactInfo extends BaseEntity {
@@ -24,32 +28,5 @@ public class ContactInfo extends BaseEntity {
         this.address = address;
         this.city = city;
         this.telephone = telephone;
-    }
-
-    public ContactInfo() {
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 }

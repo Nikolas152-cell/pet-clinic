@@ -1,5 +1,6 @@
 package udemy.studying.petclinic.model.vet;
 
+import lombok.Data;
 import udemy.studying.petclinic.model.person.Person;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "vets")
+@Data
 public class Vet extends Person {
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -15,12 +17,4 @@ public class Vet extends Person {
             joinColumns = @JoinColumn(name = "vet_id"),
             inverseJoinColumns = @JoinColumn(name = "speciality_id"))
     private Set<Speciality> specialities = new HashSet<>();
-
-    public Set<Speciality> getSpecialities() {
-        return specialities;
-    }
-
-    public void setSpecialities(Set<Speciality> specialities) {
-        this.specialities = specialities;
-    }
 }

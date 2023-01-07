@@ -1,5 +1,6 @@
 package udemy.studying.petclinic.model;
 
+import lombok.Data;
 import udemy.studying.petclinic.model.person.Person;
 import udemy.studying.petclinic.model.pet.Pet;
 
@@ -12,16 +13,9 @@ import java.util.Set;
 
 @Entity
 @Table(name = "owners")
+@Data
 public class Owner extends Person {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
-
-    public Set<Pet> getPets() {
-        return pets;
-    }
-
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
-    }
 }

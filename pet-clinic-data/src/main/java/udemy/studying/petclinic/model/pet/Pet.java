@@ -1,5 +1,7 @@
 package udemy.studying.petclinic.model.pet;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import udemy.studying.petclinic.model.NamedEntity;
 import udemy.studying.petclinic.model.Owner;
 import udemy.studying.petclinic.model.Visit;
@@ -9,8 +11,10 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+@NoArgsConstructor
 @Entity
 @Table(name = "pets")
+@Data
 public class Pet extends NamedEntity {
 
     @ManyToOne
@@ -31,38 +35,5 @@ public class Pet extends NamedEntity {
         this.petType = petType;
         this.birthDate = birthDate;
         this.owner = owner;
-    }
-    public Pet () {}
-
-    public PetType getPetType() {
-        return petType;
-    }
-
-    public void setPetType(PetType petType) {
-        this.petType = petType;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-
-    public Set<Visit> getVisits() {
-        return visits;
-    }
-
-    public void setVisits(Set<Visit> visits) {
-        this.visits = visits;
     }
 }
