@@ -1,9 +1,6 @@
 package udemy.studying.petclinic.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +11,7 @@ import java.io.Serializable;
 @MappedSuperclass
 @Getter
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
 public class BaseEntity implements Serializable {
 

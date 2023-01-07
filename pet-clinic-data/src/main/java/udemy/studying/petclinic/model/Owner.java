@@ -1,8 +1,6 @@
 package udemy.studying.petclinic.model;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import udemy.studying.petclinic.model.person.Person;
 import udemy.studying.petclinic.model.pet.Pet;
 
@@ -15,7 +13,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "owners")
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 public class Owner extends Person {
 
@@ -23,8 +22,11 @@ public class Owner extends Person {
     private Set<Pet> pets = new HashSet<>();
 
     @Builder
-    public Owner(Long id, String lastName) {
-        this.setId(id);
-        this.setLastName(lastName);
+    public Owner(Long id, String firstName, String lastName, Set<Pet> pets) {
+        super(id, firstName, lastName);
+
+        if(pets != null) {
+            this.pets = pets;
+        }
     }
 }

@@ -1,14 +1,13 @@
 package udemy.studying.petclinic.model.person;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import udemy.studying.petclinic.model.BaseEntity;
 
 import javax.persistence.*;
 
 @MappedSuperclass
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 public class Person extends BaseEntity {
 
@@ -21,6 +20,12 @@ public class Person extends BaseEntity {
     @OneToOne
     @JoinColumn(name = "id_contact_info")
     private ContactInfo contactInfo;
+
+    public Person(Long id, String firstName, String lastName) {
+        super(id);
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public void setContactInfo(ContactInfo contactInfo) {
         this.contactInfo = contactInfo;
