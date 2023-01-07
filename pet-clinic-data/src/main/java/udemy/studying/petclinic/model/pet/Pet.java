@@ -1,6 +1,7 @@
 package udemy.studying.petclinic.model.pet;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import udemy.studying.petclinic.model.NamedEntity;
 import udemy.studying.petclinic.model.Owner;
@@ -15,6 +16,7 @@ import java.util.Set;
 @Entity
 @Table(name = "pets")
 @Data
+@EqualsAndHashCode(exclude = {"owner"})
 public class Pet extends NamedEntity {
 
     @ManyToOne
