@@ -16,15 +16,15 @@
       </tr>
       <tr>
         <th>Address</th>
-        <td th:text="*{address}"></td>
+        <td th:text="*{contactInfo.address}"></td>
       </tr>
       <tr>
         <th>City</th>
-        <td th:text="*{city}"></td>
+        <td th:text="*{contactInfo.city}"></td>
       </tr>
       <tr>
         <th>Telephone</th>
-        <td th:text="*{telephone}"></td>
+        <td th:text="*{contactInfo.telephone}"></td>
       </tr>
     </table>
   
@@ -49,7 +49,7 @@
             <dd
               th:text="${#temporals.format(pet.birthDate, 'yyyy-MM-dd')}"></dd>
             <dt>Type</dt>
-            <dd th:text="${pet.type}"></dd>
+            <dd th:text="${pet.petType.name}"></dd>
           </dl>
         </td>
         <td valign="top">
