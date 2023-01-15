@@ -2,7 +2,10 @@ package udemy.studying.petclinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 import udemy.studying.petclinic.services.OwnerService;
 
 @Controller
@@ -25,6 +28,13 @@ public class OwnerController {
     public String findOwners() {
 
         return "notImplemented";
+    }
+
+    @GetMapping("/{id}")
+    public ModelAndView getOwner(@PathVariable Long id) {
+        ModelAndView modelAndView = new ModelAndView("owners/ownerDetails");
+        modelAndView.addObject("owner", ownerService.findById(id));
+        return  modelAndView;
     }
 
 }
