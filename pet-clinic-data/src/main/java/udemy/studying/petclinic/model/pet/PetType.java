@@ -11,4 +11,8 @@ import javax.persistence.Table;
 @Table(name = "types")
 public class PetType extends NamedEntity {
 
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
