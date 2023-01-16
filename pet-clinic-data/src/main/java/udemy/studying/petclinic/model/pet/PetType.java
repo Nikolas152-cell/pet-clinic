@@ -8,8 +8,6 @@ import javax.persistence.Table;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "types")
 public class PetType extends NamedEntity {
@@ -18,6 +16,10 @@ public class PetType extends NamedEntity {
     public PetType(Long id, String name) {
         this.setId(id);
         this.setName(name);
+    }
+
+    public PetType() {
+
     }
 
     @Override
