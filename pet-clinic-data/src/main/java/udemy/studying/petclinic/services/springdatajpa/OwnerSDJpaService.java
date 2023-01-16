@@ -4,6 +4,7 @@ package udemy.studying.petclinic.services.springdatajpa;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import udemy.studying.petclinic.model.Owner;
+import udemy.studying.petclinic.repositories.ContactInfoRepository;
 import udemy.studying.petclinic.repositories.OwnerRepository;
 import udemy.studying.petclinic.repositories.PetRepository;
 import udemy.studying.petclinic.repositories.PetTypeRepository;
@@ -23,12 +24,14 @@ public class OwnerSDJpaService implements OwnerService {
     private final OwnerRepository ownerRepository;
     private final PetRepository petRepository;
     private final PetTypeRepository petTypeRepository;
+    private final ContactInfoRepository contactInfoRepository;
 
     public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository,
-                             PetTypeRepository petTypeRepository) {
+                             PetTypeRepository petTypeRepository, ContactInfoRepository contactInfoRepository) {
         this.ownerRepository = ownerRepository;
         this.petRepository = petRepository;
         this.petTypeRepository = petTypeRepository;
+        this.contactInfoRepository = contactInfoRepository;
     }
 
     @Override
@@ -56,6 +59,7 @@ public class OwnerSDJpaService implements OwnerService {
 
     @Override
     public Owner save(Owner object) {
+        contactInfoRepository.save(object.getContactInfo());
         return ownerRepository.save(object);
     }
 
