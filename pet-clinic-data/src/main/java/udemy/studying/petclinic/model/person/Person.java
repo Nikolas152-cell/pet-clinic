@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Person extends BaseEntity {
 
     @Column(name = "first_name")
