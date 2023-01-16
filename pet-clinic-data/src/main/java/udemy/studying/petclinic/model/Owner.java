@@ -29,4 +29,12 @@ public class Owner extends Person {
             this.pets = pets;
         }
     }
+
+    public Pet getPet(Long petId) {
+        return pets
+                .stream()
+                .filter(pet -> pet.getId() == petId)
+                .findFirst()
+                .orElse(null);
+    }
 }
