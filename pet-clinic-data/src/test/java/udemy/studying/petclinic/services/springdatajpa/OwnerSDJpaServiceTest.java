@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import udemy.studying.petclinic.model.Owner;
+import udemy.studying.petclinic.repositories.ContactInfoRepository;
 import udemy.studying.petclinic.repositories.OwnerRepository;
 import udemy.studying.petclinic.repositories.PetRepository;
 import udemy.studying.petclinic.repositories.PetTypeRepository;
@@ -29,6 +30,8 @@ class OwnerSDJpaServiceTest {
     private PetRepository petRepository;
     @Mock
     private PetTypeRepository petTypeRepository;
+    @Mock
+    private ContactInfoRepository contactInfoRepository;
 
     @InjectMocks
     OwnerSDJpaService ownerSDJpaService;
