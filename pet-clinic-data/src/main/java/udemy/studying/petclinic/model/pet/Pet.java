@@ -38,4 +38,9 @@ public class Pet extends NamedEntity {
         this.birthDate = birthDate;
         this.owner = owner;
     }
+
+    public void addVisit(Visit visit) {
+        visits.add(visit);
+        visit.setPet(this);
+    }
 }
